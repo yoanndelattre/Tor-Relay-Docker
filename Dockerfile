@@ -7,7 +7,7 @@ ENV ORPort=443 \
     RelayBandwidthRate="1000 KBytes" \
     RelayBandwidthBurst="5000 KBytes"
 COPY tor.sh /tor.sh
-RUN apk add --update --no-cache tor ntp && \
+RUN apk add --update --no-cache tor && \
     mkdir -p /var/lib/tor && \
     chown -R tor /var/lib/tor && \
     chmod 700 /var/lib/tor && \
