@@ -8,10 +8,12 @@ ENV ORPort=9001 \
     RelayBandwidthBurst="10000 KBytes"
 COPY tor.sh /tor.sh
 RUN apk add --update --no-cache tor && \
-    mkdir -p /var/lib/tor && \
+    mkdir -p /var/lib/tor/keys && \
     chown -R tor /var/lib/tor && \
     chmod 700 /var/lib/tor && \
     chown -R tor /etc/tor && \
+    chown -R tor /var/lib/tor/keys && \
+    chmod 700 /var/lib/tor/keys && \
     chmod +x /tor.sh
 USER tor
 EXPOSE 9001
