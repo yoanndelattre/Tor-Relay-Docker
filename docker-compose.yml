@@ -10,7 +10,7 @@ services:
     ports:
       - 443:443
     volumes:
-      - tor-relay_data:/var/lib/tor
+      - tor-relay_keys:/var/lib/tor/keys
 
 volumes:
-  tor-relay_data:
+  tor-relay_keys:
