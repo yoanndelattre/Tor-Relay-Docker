@@ -3,7 +3,7 @@ ENV ORPort=443 \
     Nickname="tor_relay" \
     ContactInfo="contact@mail.com" \
     AccountingStart="day 0:00" \
-    AccountingMax="10 GBytes" \
+    AccountingMax="50 GBytes" \
     RelayBandwidthRate="1000 KBytes" \
     RelayBandwidthBurst="5000 KBytes"
 COPY tor.sh /tor.sh
