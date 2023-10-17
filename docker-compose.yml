@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  tor-relay:
+    container_name: tor-relay
+    hostname: tor-relay
+    restart: always
+    image: registry.gitlab.com/yoanndelattre/tor-relay-docker:latest
+    env_file: .env
+    ports:
+      - 443:443
+    volumes:
+      - tor-relay_data:/var/lib/tor
+
+volumes:
+  tor-relay_data:
