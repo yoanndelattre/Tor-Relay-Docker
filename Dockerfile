@@ -14,7 +14,7 @@ RUN apk add --update --no-cache tor && \
     chown -R tor /etc/tor && \
     chmod +x /tor.sh
 USER tor
-EXPOSE 443
+EXPOSE 9001
 VOLUME ["/var/lib/tor/keys"]
 ENTRYPOINT ["/tor.sh"]
 CMD ["-f", "/etc/tor/torrc"]
