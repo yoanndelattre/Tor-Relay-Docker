@@ -11,6 +11,8 @@ RUN apk add --update --no-cache tor && \
     mkdir -p /var/lib/tor && \
     chown -R tor /var/lib/tor && \
     chmod 700 /var/lib/tor && \
+    chown -R tor /var/lib/tor/keys && \
+    chmod 700 /var/lib/tor/keys && \
     chown -R tor /etc/tor && \
     chmod +x /tor.sh
 USER tor
