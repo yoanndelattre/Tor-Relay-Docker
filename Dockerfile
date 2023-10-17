@@ -1,5 +1,5 @@
 FROM alpine:latest
-ENV ORPort=443 \
+ENV ORPort=9001 \
     Nickname="tor_relay" \
     ContactInfo="contact@mail.com" \
     AccountingStart="day 0:00" \
