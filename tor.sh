@@ -21,4 +21,6 @@ echo "Write 'RelayBandwidthRate ${RelayBandwidthRate}' in /etc/tor/torrc file"
 echo "RelayBandwidthRate ${RelayBandwidthRate}" >> /etc/tor/torrc
 echo "Write 'RelayBandwidthBurst ${RelayBandwidthBurst}' in /etc/tor/torrc file"
 echo "RelayBandwidthBurst ${RelayBandwidthBurst}" >> /etc/tor/torrc
+chown -R tor /var/lib/tor/keys
+chmod 700 /var/lib/tor/keys
 exec tor "$@"
