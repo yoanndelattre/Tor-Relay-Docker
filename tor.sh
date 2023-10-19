@@ -21,4 +21,6 @@ echo "Write 'RelayBandwidthRate ${RelayBandwidthRate}' in /etc/tor/torrc file"
 echo "RelayBandwidthRate ${RelayBandwidthRate}" >> /etc/tor/torrc
 echo "Write 'RelayBandwidthBurst ${RelayBandwidthBurst}' in /etc/tor/torrc file"
 echo "RelayBandwidthBurst ${RelayBandwidthBurst}" >> /etc/tor/torrc
+echo "Write 'MetricsPort 127.0.0.1:9035 prometheus' in /etc/tor/torrc file"
+echo "MetricsPort 127.0.0.1:9035 prometheus" >> /etc/tor/torrc
 exec tor "$@"
