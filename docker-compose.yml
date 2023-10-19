@@ -5,7 +5,7 @@ services:
     container_name: tor-relay
     hostname: tor-relay
     restart: always
-    image: registry.gitlab.com/yoanndelattre/tor-relay-docker:latest
+    image: ghcr.io/yoanndelattre/tor-relay-docker:main
     env_file: .env
     ports:
       - 9001:9001
